@@ -6,7 +6,7 @@ Shared Claude Code skills for the FanDuel Racing product team.
 
 1. Clone this repo:
    ```bash
-   git clone https://github.com/<your-org>/fanduel-racing-skills.git ~/fanduel-racing-skills
+   git clone https://github.com/alexsayles/fanduel-racing-skills.git ~/fanduel-racing-skills
    ```
 
 2. Add the skills directory to your Claude Code settings (`~/.claude/settings.json`):
@@ -23,6 +23,8 @@ Shared Claude Code skills for the FanDuel Racing product team.
 | Skill | Command | Description |
 |-------|---------|-------------|
 | Amplitude Specs | `/amplitude-specs` | Generate Amplitude event tracking specs for Racing features, publish to Confluence |
+| Racing Project Kickoff | `/racing-project-kickoff` | Kick off a new Racing initiative — creates the full Jira ticket set (FPDISCO, PONY, INITRACING, UXDFLY) wired together with the correct link types |
+| Racing Business Case | `/racing-business-case` | Build a structured business case for a Racing feature — interviews you, drafts revenue impact and success metrics, then publishes to Confluence under FDR Transformational Work linked back to the FPDISCO ticket |
 
 ## Adding Skills
 
