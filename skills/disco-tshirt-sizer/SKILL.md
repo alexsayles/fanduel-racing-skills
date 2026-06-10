@@ -76,37 +76,25 @@ Extract:
 
 ---
 
-## Phase 2 — Ask Targeted Clarifying Questions
+## Phase 2 — Give an Initial Recommendation
 
-Ask only what isn't already clear from the ticket. Aim for 3–5 questions max. Group them.
-Think like an eng lead in a sizing call — don't ask things you can infer.
+**Lead with a recommendation — do not ask questions first.**
 
-**Always ask if not clear:**
-- Is data for this feature already available in the current data layer, or does it need to be sourced / piped from somewhere new?
-- Which platforms are in scope — desktop, mobile web, iOS native, Android native, x-sell (SBK)?
-- Are there any cross-team dependencies (CPP, CPE, United Tote, Data Warehouse, etc.)?
-
-**Ask if relevant:**
-- Is there a Figma with confirmed designs, or is design exploration still needed?
-- Is the technical approach clear, or are there unknowns that would require a spike before sizing?
-- Does this touch wagering logic, settlement, or financial flows? (Significant backend risk signal)
-- Is this a net-new feature or an extension of something already built?
-
----
-
-## Phase 3 — Score and Recommend
-
-Score each of the 8 dimensions (Low / Medium / High complexity), then map to a size.
+Score each of the 8 dimensions (Low / Medium / High complexity) based solely on what's
+in the ticket. Make reasonable inferences where information is missing (e.g. if platform
+scope is unstated, assume FDR desktop + mobile web as the baseline). State your assumptions
+explicitly in the output so the user can correct them.
 
 **Decision rules:**
 - Any single "High" on cross-team dependency or unknown technical approach → bump at least one size up, or flag Spike
 - 3+ "Medium" dimensions → likely M or above
 - All "Low" → likely XS or S
-- Mobile native scope automatically adds ~1–2 sprints vs desktop-only
+- Mobile native scope adds ~1–2 sprints vs desktop-only
+- If a critical dimension is genuinely unknowable from the ticket (e.g. data availability for a novel source), note it as a key assumption and flag it as a question — but still give a size range
 
 Cite **at least one comparable Racing ticket** to anchor your recommendation.
 
-Format your output:
+Output format:
 
 ```
 ## T-Shirt Size: [XS / S / M / L / XL / Spike]
@@ -119,17 +107,26 @@ Estimate: [X–Y sprints] | Confidence: [High / Medium / Low]
 - [INITRACING-XXXX or FPDISCO-XXXX] — [name] ([size]) — [1-line similarity reason]
 - [second comparable if available]
 
-### Assumptions
-- [assumption 1 — what must be true for this size to hold]
+### Assumptions (correct me if wrong)
+- [assumption 1 — what I inferred from the ticket]
 - [assumption 2]
 
-### Risks / what could make it bigger
+### What could make it bigger
 - [risk 1]
 - [risk 2]
 
-### Suggested next step
-[Spike / design confirmation / cross-team dependency check / ready to create INIT]
+### Questions that would change the size
+[Only include if there are 1–3 specific answers that could move the estimate by a full size.
+If nothing would materially change it, omit this section entirely.]
+- [question 1 — and how the answer would affect the size]
 ```
+
+---
+
+## Phase 3 — Refine if Needed
+
+If the user provides answers to your questions, update the estimate accordingly. Show
+what changed and why. Keep it brief — one updated output block is enough.
 
 ---
 
