@@ -26,6 +26,7 @@ Shared Claude Code skills for the FanDuel Racing product team.
 | Racing Project Kickoff | `/racing-project-kickoff` | Kick off a new Racing initiative — creates the full Jira ticket set (FPDISCO, PONY, INITRACING, UXDFLY) wired together with the correct link types |
 | Racing Business Case | `/racing-business-case` | Build a structured business case for a Racing feature — interviews you, drafts revenue impact and success metrics, then publishes to Confluence under FDR Transformational Work linked back to the FPDISCO ticket |
 | Disco T-Shirt Sizer | `/disco-tshirt-sizer` | Act as a Racing engineering lead to assess t-shirt size (XS/S/M/L/XL/Spike) for a FPDISCO discovery ticket — asks targeted clarifying questions, references comparable shipped tickets, and optionally writes the sizing back to Jira |
+| Racing Feature Marketing | `/racing-feature-marketing` | Write email and in-app marketing copy for a Racing feature launch — interviews you, generates 2 variants per channel (baseline + creative), then publishes to Confluence under FDR Transformational Work |
 
 ## Adding Skills
 
