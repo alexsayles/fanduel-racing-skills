@@ -32,4 +32,54 @@ Shared Claude Code skills for the FanDuel Racing product team.
 
 1. Create a new directory under `skills/` with the skill name (kebab-case).
 2. Add a `SKILL.md` file inside it — see existing skills for the format.
-3. Open a PR, get it merged, and teammates pull the latest.
+3. Open a PR, get it merged, and teammates pull the latest
+
+## Contributing
+
+Contributions are made via the fork-and-pull-request workflow. You don't need write access to this repo — fork it, make your change on a branch, and open a PR.
+
+### 1. Fork the repository
+
+Fork this repo to your own GitHub account (via the **Fork** button on GitHub, or with the GitHub CLI):
+
+```bash
+gh repo fork alexsayles/fanduel-racing-skills --clone=false
+```
+
+### 2. Set up your remotes
+
+If you already cloned this repo, point `upstream` at the original and `origin` at your fork:
+
+```bash
+git remote rename origin upstream
+git remote add origin https://github.com/<your-username>/fanduel-racing-skills.git
+git remote -v   # confirm: upstream -> alexsayles, origin -> your fork
+```
+
+### 3. Create a branch, edit, commit, and push
+
+```bash
+git checkout main
+git pull upstream main          # sync with the latest changes
+
+git checkout -b my-change       # create a feature branch
+
+# ...make your edits...
+
+git add path/to/your/file
+git commit -m "Describe your change"
+
+git push -u origin my-change    # push to your fork
+```
+
+### 4. Open a pull request
+
+```bash
+gh pr create --repo alexsayles/fanduel-racing-skills \
+  --base main \
+  --head <your-username>:my-change \
+  --title "Describe your change" \
+  --body "Explain what changed and why"
+```
+
+Then wait for review. Thanks for contributing!.
