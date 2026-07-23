@@ -6,7 +6,7 @@ Shared Claude Code skills for the FanDuel Racing product team.
 
 1. Clone this repo:
    ```bash
-   git clone https://github.com/alexsayles/fanduel-racing-skills.git ~/fanduel-racing-skills
+   git clone https://github.com/alexsayles/fanduel-racing-skills.git
    ```
 
 2. Add the skills directory to your Claude Code settings (`~/.claude/settings.json`):
